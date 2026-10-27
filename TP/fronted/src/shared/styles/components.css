@@ -1,0 +1,225 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 20px;
+  min-height: 40px;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+  white-space: nowrap;
+}
+.button.primary {
+    color: #fff;
+      background: var(--blue);
+        box-shadow: 0 2px 3px #285bd717;
+}
+.button.primary:hover {
+  background: var(--blue-dark);
+  color: #fff;
+}
+.button.secondary {
+  background: #fff;
+  color: var(--text);
+  border-color: #ccd5df;
+}
+.button.secondary:hover {
+  background: #f5f8fc;
+  border-color: #a9b7c7;
+}
+.button.quiet {
+  color: var(--blue);
+  background: transparent;
+}
+.button.quiet:hover {
+  background: var(--blue-soft);
+}
+.button:disabled {
+  opacity: 0.48;
+  box-shadow: none;
+}
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 7px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+}
+.icon-button:hover {
+  background: #1729380b;
+}
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-width: 0;
+  overflow: clip;
+}
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 25px 18px;
+  gap: 16px;
+}
+.panel-heading h2 {
+  margin-bottom: 4px;
+}
+.panel-heading p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+}
+.panel-body {
+  padding: 24px;
+}
+.panel-heading + .panel-body {
+  padding-top: 4px;
+}
+.page-tabs {
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid #d9e0e8;
+  margin-bottom: 26px;
+  overflow-x: auto;
+}
+.page-tabs button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 13px 0;
+  color: #637488;
+  background: none;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.page-tabs button.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 650;
+}
+.field small {
+  color: var(--muted);
+  font-weight: 400;
+  line-height: 1.55;
+  font-size: 11px;
+}
+.field input,
+.field select,
+.field textarea {
+  font-weight: 400;
+  font-size: 13px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 4px;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: #0d1b2c8c;
+  backdrop-filter: blur(3px);
+  animation: fade-in 0.15s;
+}
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 41;
+  background: white;
+  border: 1px solid #e1e7ee;
+  border-radius: 16px;
+  width: min(600px, calc(100vw - 32px));
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+  box-shadow: 0 28px 100px #08132647;
+}
+.modal-content.wide {
+  width: min(1050px, calc(100vw - 32px));
+}
+.modal-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px 26px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.modal-heading h2 {
+  font-size: 20px;
+  margin: 0 0 7px;
+}
+.modal-heading p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 0;
+}
+.modal-body {
+  padding: 23px 26px 26px;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.metadata-list {
+  margin: 15px 0 21px;
+  font-size: 12px;
+}
+.metadata-list > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 9px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+.metadata-list dt {
+  color: var(--muted);
+}
+.metadata-list dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+  max-width: 65%;
+}
